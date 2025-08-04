@@ -1,0 +1,90 @@
+<mat-card class="p-6">
+    <h2 class="text-lg font-bold mb-4">Port Cargo List</h2>
+
+    <table mat-table [dataSource]="portCargoList" class="w-full mat-elevation-z2 text-sm">
+
+        <!-- تعریف ستون‌ها -->
+        <ng-container matColumnDef="portName">
+            <th mat-header-cell *matHeaderCellDef> Port Name </th>
+            <td mat-cell *matCellDef="let row"> {{row.portName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cargo">
+            <th mat-header-cell *matHeaderCellDef> Cargo </th>
+            <td mat-cell *matCellDef="let row"> {{row.cargo}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="f">
+            <th mat-header-cell *matHeaderCellDef> F </th>
+            <td mat-cell *matCellDef="let row"> {{row.f}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="blCode">
+            <th mat-header-cell *matHeaderCellDef> BL Code </th>
+            <td mat-cell *matCellDef="let row"> {{row.blCode}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="quantity">
+            <th mat-header-cell *matHeaderCellDef> Quantity </th>
+            <td mat-cell *matCellDef="let row"> {{row.quantity}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ldRate">
+            <th mat-header-cell *matHeaderCellDef> L/D Rate </th>
+            <td mat-cell *matCellDef="let row"> {{row.ldRate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="term">
+            <th mat-header-cell *matHeaderCellDef> Term </th>
+            <td mat-cell *matCellDef="let row"> {{row.term}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="demRate">
+            <th mat-header-cell *matHeaderCellDef> Dem Rate </th>
+            <td mat-cell *matCellDef="let row"> {{row.demRate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="desRate">
+            <th mat-header-cell *matHeaderCellDef> Des Rate/D </th>
+            <td mat-cell *matCellDef="let row"> {{row.desRate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="allowed">
+            <th mat-header-cell *matHeaderCellDef> Allowed </th>
+            <td mat-cell *matCellDef="let row"> {{row.allowed}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="used">
+            <th mat-header-cell *matHeaderCellDef> Used </th>
+            <td mat-cell *matCellDef="let row"> {{row.used}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="deduction">
+            <th mat-header-cell *matHeaderCellDef> Deduction </th>
+            <td mat-cell *matCellDef="let row"> {{row.deduction}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="balance">
+            <th mat-header-cell *matHeaderCellDef> Balance </th>
+            <td mat-cell *matCellDef="let row"> {{row.balance}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="laycanFrom">
+            <th mat-header-cell *matHeaderCellDef> Laycan From </th>
+            <td mat-cell *matCellDef="let row"> {{row.laycanFrom}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="laycanTo">
+            <th mat-header-cell *matHeaderCellDef> Laycan To </th>
+            <td mat-cell *matCellDef="let row"> {{row.laycanTo}} </td>
+        </ng-container>
+
+        <!-- ردیف‌ها -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns" (click)="select(row)"
+            class="cursor-pointer hover:bg-blue-100" [ngClass]="{
+    '!bg-blue-200': selectedCargoId === row.id
+  }"></tr>
+
+    </table>
+</mat-card>

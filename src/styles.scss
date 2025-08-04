@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-display: swap;
+  font-family: vazir;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/font/Vazirmatn-Regular.woff2') format("woff"),
+  url(/assets/font/Vazirmatn-Regular.ttf) format("truetype")
+}
+body{
+  width: 100%;
+  height: 100%;
+  overflow-x:hidden;
+  direction: rtl;
+}
+*{
+  font-family: vazir, serif;
+  letter-spacing: normal !important
+}
+ul{
+  list-style: none;
+}
+.mat-mdc-form-field-subscript-wrapper{
+  height: 0 !important;
+}
+
+.body{
+  background:#ebedef!important;
+}
+
+*, .mdc-list-item__primary-text {
+  font-family: vazir, serif !important;
+  letter-spacing: unset !important;
+}
+
+mat-form-field:not(.custom-input) .mdc-text-field--outlined {
+  --mdc-outlined-text-field-container-shape: 12px;
+}
+
+mat-form-field:not(.custom-input) .mdc-notched-outline__notch {
+  display: flex;
+  flex-basis: content;
+}
+
+mat-form-field .mdc-notched-outline__notch, mat-form-field .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading, .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline .mdc-notched-outline__trailing {
+  border-color: #eee !important;
+}
+
+mat-form-field:not(.custom-input) .mat-mdc-text-field-wrapper {
+  height: 40px !important;
+}
+
+mat-form-field:not(.custom-input) .mat-mdc-form-field-flex {
+  margin-top: -7px !important;
+}
+
+mat-form-field:not(.custom-input) .mat-mdc-form-field:not(.mat-focused) .mat-mdc-text-field-wrapper.mdc-text-field .mdc-notched-outline__notch {
+  display: flex;
+  flex-basis: fit-content;
+}
+
+mat-form-field:not(.custom-input) [dir=rtl] .mdc-notched-outline--notched .mdc-notched-outline__notch {
+  padding-left: 0 !important;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+router-outlet + * {
+  display: block; /* Change display inline to block */
+  animation: fade 0.5s;
+}
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+.success-alert{
+  @apply p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400
+}
+.danger-alert{
+  @apply p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-blue-400
+}
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline .mdc-notched-outline__notch{
+  border-right-width: 0 !important;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2D87F3;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2D87F3;
+}
+#serviceTable{
+  table{
+    tr{
+      td,th{
+        text-wrap: nowrap !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .mat-mdc-paginator-range-label{
+    margin: 0 !important;
+  }
+}
+.mat-elevation-z8{
+  *{
+    white-space: nowrap;
+  }
+}
+.hide-scrolling::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrolling {
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.my-button{
+  @apply w-full cursor-pointer font-bold p-1 rounded hover:bg-blue-700 border-2 border-black
+}
+
+.blue-button{
+  @apply cursor-pointer bg-blue-500 text-white font-bold p-1 rounded hover:bg-blue-700
+}
+.green-button{
+  @apply cursor-pointer bg-green-500 text-white font-bold p-1 rounded hover:bg-blue-700
+}
+.red-button{
+  @apply cursor-pointer bg-red-500 text-white font-bold p-1 rounded hover:bg-blue-700
+}
+.yellow-button{
+  @apply cursor-pointer bg-yellow-500 text-white font-bold p-1 rounded hover:bg-blue-700
+}
+.success-alert{
+  @apply bg-green-500 p-2 rounded text-white
+}
+.bg-error-important {
+  background-color: #fee2e2 !important; /* رنگ bg-red-100 با !important */
+}

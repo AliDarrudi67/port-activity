@@ -1,0 +1,8 @@
+<section dir="ltr" class="p-6">
+    <app-port-cargo-table (selectCargo)="onCargoSelected($event)"></app-port-cargo-table>
+
+    <div class="mt-8">
+        <app-port-activity-table [selectedCargo]="selectedCargo"></app-port-activity-table>
+    </div>
+
+</section>
