@@ -18,12 +18,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { SharedModule } from './shared/shared.module';
-import { ShipListComponent } from './components/ship-list/ship-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShipListComponent,
   ],
   imports: [
     BrowserModule,
